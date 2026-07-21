@@ -36,7 +36,9 @@ nav a {
   transition: opacity 150ms ease;
 }
 
-nav a:hover { opacity: 1; }
+nav a:hover {
+  opacity: 1;
+}
 
 main {
   min-height: 100vh;
@@ -126,8 +128,15 @@ h1 {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(2px); }
-  to { opacity: 1; transform: translateY(-10px); }
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -141,6 +150,7 @@ h1 {
   }
 
   .hero {
+    animation: none;
     transform: translateY(-90px);
   }
 
@@ -159,5 +169,4 @@ h1 {
   .badge-text strong {
     font-size: 19px;
   }
-
 }
