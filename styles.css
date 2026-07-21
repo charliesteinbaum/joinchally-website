@@ -131,14 +131,33 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  header { padding: 22px 20px; }
-  nav { gap: 18px; }
-  .trophy { width: 140px; margin-bottom: 20px; }
+
+  header {
+    padding: 22px 20px;
+  }
+
+  nav {
+    gap: 18px;
+  }
+
+  .hero {
+    transform: translateY(-90px);
+  }
+
+  .trophy {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
   .app-store-badge {
     right: 20px;
     bottom: 20px;
     min-width: 164px;
     padding: 8px 13px 9px;
   }
-  .badge-text strong { font-size: 19px; }
+
+  .badge-text strong {
+    font-size: 19px;
+  }
+
 }
