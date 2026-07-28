@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chally</title>
+
+  <meta property="og:title" content="Join me on Chally" />
+  <meta property="og:description" content="Track challenges with friends." />
+  <meta property="og:image" content="https://joinchally.com/iconB.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Join me on Chally" />
+  <meta name="twitter:description" content="Track challenges with friends." />
+  <meta name="twitter:image" content="https://joinchally.com/iconB.png" />
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0B0B0F;
+      color: #fff;
+      text-align: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    #fallback { display: none; max-width: 320px; }
+    h1 { font-size: 20px; margin: 0 0 8px; }
+    p { font-size: 15px; color: #9BA3B2; margin: 0; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div id="fallback">
+    <h1>Chally</h1>
+    <p>Chally is currently in private testing. Ask the person who sent you this link for an invite.</p>
+  </div>
+
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
+    var deepLink = id ? ('challenge://challenge/' + id) : 'challenge://';
+
+    var didHide = false;
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) didHide = true;
+    });
+
+    window.location.href = deepLink;
+
+    setTimeout(function () {
+      if (!didHide) {
+        document.getElementById('fallback').style.display = 'block';
+      }
+    }, 1200);
+  </script>
+</body>
+</html>
