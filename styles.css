@@ -1,22 +1,44 @@
-*{box-sizing:border-box;}
+*{
+box-sizing:border-box;
+}
 
-html,body{
+html{
 width:100%;
 min-height:100%;
+background:#E9852D;
 }
 
 body{
 margin:0;
+width:100%;
 min-height:100vh;
+min-height:100svh;
+min-height:100dvh;
 overflow:hidden;
-background:linear-gradient(
+
+background:
+radial-gradient(
+circle at 12% 8%,
+rgba(255,255,255,.16) 0%,
+rgba(255,255,255,.08) 18%,
+rgba(255,255,255,0) 43%
+),
+radial-gradient(
+circle at 92% 92%,
+rgba(255,205,55,.44) 0%,
+rgba(255,205,55,.20) 24%,
+rgba(255,205,55,0) 50%
+),
+linear-gradient(
 135deg,
-#CF654A 0%,
-#DD743C 18%,
-#EE8925 45%,
-#F99D1B 72%,
-#FFC31A 100%
+#CD654A 0%,
+#DE743A 20%,
+#EE8728 47%,
+#F79B1D 72%,
+#FFC21A 100%
 );
+
+background-attachment:fixed;
 color:#fff;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
 }
@@ -26,7 +48,11 @@ position:fixed;
 top:0;
 right:0;
 z-index:10;
-padding:28px 34px;
+padding:
+calc(28px + env(safe-area-inset-top))
+calc(34px + env(safe-area-inset-right))
+28px
+34px;
 }
 
 nav{
@@ -47,10 +73,17 @@ opacity:1;
 }
 
 main{
+width:100%;
 min-height:100vh;
+min-height:100svh;
+min-height:100dvh;
 display:grid;
 place-items:center;
-padding:40px 20px;
+padding:
+calc(40px + env(safe-area-inset-top))
+calc(20px + env(safe-area-inset-right))
+calc(40px + env(safe-area-inset-bottom))
+calc(20px + env(safe-area-inset-left));
 }
 
 .hero{
@@ -63,7 +96,9 @@ animation:fade-in .5s ease both;
 }
 
 .trophy{
+display:block;
 width:clamp(170px,18vw,235px);
+height:auto;
 margin-bottom:28px;
 }
 
@@ -77,8 +112,9 @@ line-height:1;
 
 .app-store-badge{
 position:fixed;
-right:34px;
-bottom:28px;
+right:calc(34px + env(safe-area-inset-right));
+bottom:calc(28px + env(safe-area-inset-bottom));
+z-index:10;
 display:inline-flex;
 align-items:center;
 gap:10px;
@@ -121,7 +157,11 @@ transform:translateY(-40px);
 @media(max-width:600px){
 
 header{
-padding:22px 20px;
+padding:
+calc(22px + env(safe-area-inset-top))
+calc(20px + env(safe-area-inset-right))
+22px
+20px;
 }
 
 nav{
@@ -130,7 +170,7 @@ gap:18px;
 
 .hero{
 animation:none;
-transform:translateY(-110px);
+transform:translateY(-90px);
 }
 
 .trophy{
@@ -139,8 +179,8 @@ margin-bottom:22px;
 }
 
 .app-store-badge{
-right:20px;
-bottom:20px;
+right:calc(20px + env(safe-area-inset-right));
+bottom:calc(20px + env(safe-area-inset-bottom));
 min-width:164px;
 padding:8px 13px 9px;
 }
