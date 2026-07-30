@@ -1,1 +1,34 @@
-*{box-sizing:border-box;}html,body{width:100%;min-height:100%;}body{margin:0;min-height:100vh;overflow:hidden;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}header{position:fixed;top:0;right:0;z-index:10;padding:28px 34px;}nav{display:flex;gap:24px;}nav a{color:#fff;font-size:13px;text-decoration:none;opacity:.82;transition:opacity .15s;}nav a:hover{opacity:1;}main{min-height:100vh;display:grid;place-items:center;padding:40px 20px;}.hero{display:flex;flex-direction:column;align-items:center;text-align:center;transform:translateY(-10px);animation:fade-in .5s ease both;}.trophy{width:clamp(135px,14vw,190px);margin-bottom:24px;}h1{margin:0;font-size:clamp(48px,8vw,88px);font-weight:600;letter-spacing:-.055em;line-height:1;}.app-store-badge{position:fixed;right:34px;bottom:28px;display:inline-flex;align-items:center;gap:10px;min-width:178px;padding:9px 16px 10px;border:1px solid rgba(255,255,255,.75);border-radius:10px;background:#000;color:#fff;text-decoration:none;}.apple-logo{width:29px;height:29px}.badge-text small{display:block;font-size:10px}.badge-text strong{display:block;font-size:21px;font-weight:500}@keyframes fade-in{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:translateY(-10px)}}@media(max-width:600px){header{padding:22px 20px}nav{gap:18px}.hero{animation:none;transform:translateY(-90px)}.trophy{width:140px;margin-bottom:20px}.app-store-badge{right:20px;bottom:20px;min-width:164px;padding:8px 13px 9px}.badge-text strong{font-size:19px}}
+*{box-sizing:border-box;}
+html,body{width:100%;min-height:100%;}
+body{
+margin:0;
+min-height:100vh;
+overflow:hidden;
+background:
+radial-gradient(circle at 18% 15%,rgba(255,186,86,.45) 0%,rgba(255,186,86,0) 36%),
+radial-gradient(circle at 82% 88%,rgba(228,116,24,.35) 0%,rgba(228,116,24,0) 40%),
+linear-gradient(135deg,#E37C42 0%,#ED922A 48%,#F6A11F 100%);
+color:#fff;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+header{position:fixed;top:0;right:0;z-index:10;padding:28px 34px;}
+nav{display:flex;gap:24px;}
+nav a{color:#fff;font-size:13px;text-decoration:none;opacity:.82;transition:opacity .15s;}
+nav a:hover{opacity:1;}
+main{min-height:100vh;display:grid;place-items:center;padding:40px 20px;}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;transform:translateY(-10px);animation:fade-in .5s ease both;}
+.trophy{width:clamp(135px,14vw,190px);margin-bottom:24px;}
+h1{margin:0;font-size:clamp(48px,8vw,88px);font-weight:600;letter-spacing:-.055em;line-height:1;}
+.app-store-badge{position:fixed;right:34px;bottom:28px;display:inline-flex;align-items:center;gap:10px;min-width:178px;padding:9px 16px 10px;border:1px solid rgba(255,255,255,.75);border-radius:10px;background:#000;color:#fff;text-decoration:none;}
+.apple-logo{width:29px;height:29px}
+.badge-text small{display:block;font-size:10px}
+.badge-text strong{display:block;font-size:21px;font-weight:500}
+@keyframes fade-in{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:translateY(-10px)}}
+@media(max-width:600px){
+header{padding:22px 20px}
+nav{gap:18px}
+.hero{animation:none;transform:translateY(-90px)}
+.trophy{width:140px;margin-bottom:20px}
+.app-store-badge{right:20px;bottom:20px;min-width:164px;padding:8px 13px 9px}
+.badge-text strong{font-size:19px}
+}
